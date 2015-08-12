@@ -5,6 +5,7 @@
     </head>
     <body>
         <h1>Taller de Ingeniería en Software</h1>
+        <h3>V 0.5.2</h3>
         
         <form action="create.php">
         	<input type="submit" value="CREATE">
