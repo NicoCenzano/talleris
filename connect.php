@@ -1,6 +1,6 @@
 <?php
 
-￼$doc=fopen('/home/../mysql_user.txt','r');
+￼$doc=fopen('/home/gviacava/mysql_user.txt','r');
 ￼$ar=fgetcsv("$doc",1000,' ');
 
 $enlace= mysql_connect('localhost',$ar[0],$ar[1]);

@@ -9,7 +9,7 @@
         
         Estos son los usuarios hasta el minuto:
 		<br>
-        <table>
+        <table border="1">
             <tr>
                 <th>RUT</th><th>Nombres</th><th>Apellidos</th><th>Correo Electrónico</th>
             </tr>
