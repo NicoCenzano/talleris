@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://54.148.33.83'; //'http://talleris';
+$config['base_url'] = ''; //'http://talleris';
 
 /*
 |--------------------------------------------------------------------------
