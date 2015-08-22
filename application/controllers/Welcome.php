@@ -28,8 +28,18 @@ class Welcome extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         
-        //$model = array('user_model');
-        //$this->load->model($model);
+        $model = array(     
+        'user_model'           
+        );
+             
+        $this->load->model($model);
+        
+        $languages_files = array(
+            'public/page_element/menu_header',
+            'public/page/index'
+        );
+        
+        $this->lang->load($languages_files);
     }
 
     public function index()
