@@ -31,12 +31,6 @@
 				</div>
 
 				<div class="form-group">
-					<label for="inputPassword">Rut:</label> <input name="run"
-						type="text" class="form-control" id="inputPassword"
-						placeholder="Run" value="<?php echo set_value('run'); ?>">
-				</div>
-
-				<div class="form-group">
 					<label for="inputPassword">Contraseña:</label> <input
 						name="password" type="password" class="form-control"
 						id="inputPassword" placeholder="Password">
