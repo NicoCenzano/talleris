@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class User_model extends CI_Model {
@@ -13,8 +12,8 @@ class User_model extends CI_Model {
         $data = array(
             'name' => $name,
             'lastname' => $lastname,
-            'email' =>  $password,
-            'password' => $email
+            'email' =>  $email,
+            'password' => $password
         );
                
         $this->db->insert('user', $data);
