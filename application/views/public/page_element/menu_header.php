@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="container-fluid">
 
 			<div class="navbar-header">
-				<span class="navbar-brand">El dario manco</span>
+				<span class="navbar-brand">Super Compu Hiper Mega Red</span>
 			</div>
 
 			<div class="collapse navbar-collapse">

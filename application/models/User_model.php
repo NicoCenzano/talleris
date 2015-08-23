@@ -8,18 +8,16 @@ class User_model extends CI_Model {
         parent::__construct();
     }
     
-    public function _add_user($id, $nombres, $appelidos, $clave, $rut, $email){
+    public function _add_user($name, $lastname, $password, $email){
         
         $data = array(
-            'idUsuarios' => $id,
-            'nombres' => $nombres,
-            'apellidos' => $appelidos,
-            'clave' =>  $clave,
-            'rut' => $rut,
-            'email' => $email
+            'name' => $name,
+            'lastname' => $lastname,
+            'email' =>  $password,
+            'password' => $email
         );
                
-        $this->db->insert('usuarios', $data);
+        $this->db->insert('user', $data);
     }
     
 
