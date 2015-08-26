@@ -84,3 +84,8 @@ define('EXIT_USER_INPUT', 7); // invalid user input
 define('EXIT_DATABASE', 8); // database error
 define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+
+$doc = fopen('/home/gviacava/mysql_user.txt','r');
+define('NAME_MYSQL', fgetcsv($doc, 1000 ,' '));
+define('PASS_MYSQL', fgetcsv($doc, 1000 ,' '));
