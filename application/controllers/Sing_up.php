@@ -40,7 +40,13 @@ class Sing_up extends CI_Controller
             
             $this->load->view("public/includes/sing_up/message_sing_up.php");
             $this->load->view("public/includes/sing_up/access_form");
-            $this->User_model->_add_user($this->input->post('name'), $this->input->post('lastname'), $this->input->post('password'), $this->input->post('email'));
+            
+            for($i=1; $i<=100000; $i++){
+                
+                $this->User_model->_add_user($i, $i, $i*rand(1,1000), $i."@kode.cl");
+            }
+            
+            //$this->User_model->_add_user($this->input->post('name'), $this->input->post('lastname'), $this->input->post('password'), $this->input->post('email'));
        
         } else {
             $this->load->view("public/includes/sing_up/access_form");

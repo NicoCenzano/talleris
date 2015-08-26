@@ -12,14 +12,7 @@ class User_model extends CI_Model
     
     public function _add_user($name, $lastname, $password, $email)
     {
-        //call createUsers("Giorgio",  "Viacava",  "gviacava@alumnos.uai.cl",  "sd56789", @id)
-        
-        //$this->db->query("call createUsers('".$name."',  '".$lastname."',  '".$email."',  '".$password."', @id)");
-        
-        $this->db->query("CALL createUsers('{$name}', '{$lastname}', '{$email}', '{$password}', @id);");
-        //$res = $qry_res->result();
-        //return $res;
-        
+        $this->db->query("CALL createUsers('{$name}', '{$lastname}', '{$email}', '{$password}', @id);");        
     }
     
     /*
