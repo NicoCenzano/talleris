@@ -73,14 +73,16 @@ $query_builder = TRUE;
 $doc = fopen('/home/gviacava/mysql_user.txt','r');
 $argument = fgetcsv($doc, 1000 ,' ');
 
-define('A', $argument[0]);
-define('B', $argument[1]);
+$a = $argument[0];
+$b = $argument[1];
+
+die(var_dump($a));
 
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => ￼A, //'nicolas',
-	'password' => B, //'1358.KqD',
+	'username' => ￼$a, //'nicolas',
+	'password' => $b, //'1358.KqD',
 	'database' => 'talleris',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
