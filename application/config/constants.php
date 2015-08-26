@@ -87,5 +87,7 @@ define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
 $doc = fopen('/home/gviacava/mysql_user.txt','r');
-define('NAME_MYSQL', fgetcsv($doc, 1000 ,' '));
-define('PASS_MYSQL', fgetcsv($doc, 1000 ,' '));
+$argument = fgetcsv($doc, 1000 ,' ');
+
+define('NAME_MYSQL', $argument[0]);
+define('PASS_MYSQL', $argument[1]);
