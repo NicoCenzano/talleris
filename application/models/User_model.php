@@ -14,8 +14,11 @@ class User_model extends CI_Model
     {
         //call createUsers("Giorgio",  "Viacava",  "gviacava@alumnos.uai.cl",  "sd56789", @id)
         
-        $this->db->query("call createUsers('".$name."',  '".$lastname."',  '".$email."',  '".$password."', @id)");
-        return $query->row();
+        //$this->db->query("call createUsers('".$name."',  '".$lastname."',  '".$email."',  '".$password."', @id)");
+        
+        $this->db->query("CALL createUsers('{$name}', '{$lastname}', '{$email}', '{$password}', @id);");
+        $res = $qry_res->result();
+        return $res;
         
     }
     
