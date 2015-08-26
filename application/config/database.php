@@ -66,15 +66,14 @@ if("http://" . $_SERVER['SERVER_NAME'] == 'http://talleris'){
     $active_group = 'default';
 }
 
-
 //$active_group = 'test';
 $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'nicolas',
-	'password' => '1358.KqD',
+	'username' => NAME_MYSQL, //'nicolas',
+	'password' => PASS_MYSQL, //'1358.KqD'
 	'database' => 'talleris',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
