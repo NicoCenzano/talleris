@@ -9,6 +9,17 @@ class User_model extends CI_Model
         parent::__construct();
     }
 
+    
+    public function _add_user($name, $lastname, $password, $email)
+    {
+        //call createUsers("Giorgio",  "Viacava",  "gviacava@alumnos.uai.cl",  "sd56789", @id)
+        
+        $this->db->query("call createUsers(".$name.",  ".$lastname.",  ".$email.",  ".$password.", @id)");
+        return $query->row();
+        
+    }
+    
+    /*
     public function _add_user($name, $lastname, $password, $email)
     {
         $data = array(
@@ -20,5 +31,6 @@ class User_model extends CI_Model
         
         $this->db->insert('user', $data);
     }
+    */
 }
 ?>
