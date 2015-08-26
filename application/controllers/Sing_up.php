@@ -28,8 +28,8 @@ class Sing_up extends CI_Controller
         $this->form_validation->set_rules('name', 'Nombre', 'trim|required|min_length[2]|max_length[255]');
         $this->form_validation->set_rules('lastname', 'Apellido', 'trim|required|min_length[2]|max_length[255]');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-        $this->form_validation->set_rules('password', 'Nombre', 'trim|required|min_length[2]|max_length[30]!md5');
-        $this->form_validation->set_rules('repeatpassword', 'Nombre', 'trim|required|min_length[2]|matches[password]|max_length[30]!md5');
+        $this->form_validation->set_rules('password', 'contraseña', 'trim|required|min_length[2]|max_length[30]!md5');
+        $this->form_validation->set_rules('repeatpassword', 'contraseña', 'trim|required|min_length[2]|matches[password]|max_length[30]!md5');
         
         $this->load->view("public/page_element/header");
         $this->load->view("public/page_element/menu_header");

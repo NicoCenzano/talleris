@@ -24,7 +24,8 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 	    $this->load->view("public/page_element/header");
-	    $this->load->view("public/page_element/menu_header");
+	    $this->load->view("public/page_element/menu_header");    
+	    $this->load->view("public/includes/welcome/wealcome_message");
 	    $this->load->view("public/page_element/footer");
 	}
 }

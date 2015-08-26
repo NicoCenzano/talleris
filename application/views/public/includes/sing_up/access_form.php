@@ -7,7 +7,7 @@
 		<div class="panel panel-default ">
 			<div class="panel-body">
 
-				<legend>Fomurio de registro</legend>
+				<legend>Formulario de registro</legend>
 
 					<?php echo form_open(''); ?>
 
