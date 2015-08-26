@@ -66,8 +66,9 @@ if("http://" . $_SERVER['SERVER_NAME'] == 'http://talleris'){
     $active_group = 'default';
 }
 
-//$doc = fopen('/home/gviacava/mysql_user.txt','r');
-//￼$ar = fgetcsv($doc, 1000 ,' ');
+
+$doc = fopen('/home/gviacava/mysql_user.txt','r');
+￼$usuario = fgetcsv($doc, 1000 ,' ');
 
 //$active_group = 'test';
 $query_builder = TRUE;
@@ -75,8 +76,8 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'nicolas',
-	'password' => '1358.KqD',
+	'username' => ￼$usuario[0], //'nicolas',
+	'password' => ￼$usuario[1], //'1358.KqD',
 	'database' => 'talleris',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
