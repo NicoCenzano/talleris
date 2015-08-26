@@ -16,7 +16,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><?php echo anchor('sing_up', '<span class="glyphicon glyphicon-user"></span> '.$this->lang->line('menu_header_sing_up_button')) ?></li>				
+					<li><?php echo anchor('sing_up', '<span class="glyphicon glyphicon-home"></span> Ingresar') ?></li>	
+					<li><?php echo anchor('sing_up', '<span class="glyphicon glyphicon-user"></span> '.$this->lang->line('menu_header_sing_up_button')) ?></li>			
 				</ul>
 			</div>
 		</div>
