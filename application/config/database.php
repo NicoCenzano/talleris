@@ -59,14 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-//Sacar al final pero por el momento para hacer las cosas más rapidas en el computador
-if("http://" . $_SERVER['SERVER_NAME'] == 'http://talleris'){
-    $active_group = 'test';
-}else {
-    $active_group = 'default';
-}
-
-//$active_group = 'test';
+$active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -89,26 +82,4 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);
-
-$db['test'] = array(
-    'dsn' => '',
-    'hostname' => 'localhost',
-    'username' => 'root',
-    'password' => '123456789',
-    'database' => 'labtic',
-    'dbdriver' => 'mysqli',
-    'dbprefix' => '',
-    'pconnect' => FALSE,
-    'db_debug' => TRUE,
-    'cache_on' => FALSE,
-    'cachedir' => '',
-    'char_set' => 'utf8',
-    'dbcollat' => 'utf8_general_ci',
-    'swap_pre' => '',
-    'encrypt' => FALSE,
-    'compress' => FALSE,
-    'stricton' => FALSE,
-    'failover' => array(),
-    'save_queries' => TRUE
 );
