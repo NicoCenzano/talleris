@@ -32,8 +32,7 @@ class Sing_in extends CI_Controller
         $this->load->view("public/page_element/menu_header");
         
         if ($this->form_validation->run() === TRUE) {            
-            //$this->User_model->_add_user($this->input->post('email'), $this->input->post('password'));
-       
+        	
         } else {
             $this->load->view("public/includes/sing_in/access_form");
         }
