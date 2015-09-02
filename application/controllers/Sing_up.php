@@ -17,7 +17,7 @@ class Sing_up extends CI_Controller
         
         $languages_files = array(
             'public/page_element/menu_header',
-            'public/page/index'
+            'public/page/sing_up'
         );
         
         $this->lang->load($languages_files);
