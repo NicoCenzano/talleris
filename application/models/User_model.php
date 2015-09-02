@@ -21,7 +21,7 @@ class User_model extends CI_Model
         for($i=0;$i<=200000;$i++){
             $b = rand(1,1000000);
             $c = $b + 1;
-            $this->db->query("UPDATE `users` SET `father`= " .$b ." WHERE `idUsers` = ".$c."");
+            $query = $this->db->query("UPDATE `users` SET `father`= " .$b ." WHERE `idUsers` = ".$c."");
             $query->result();
         }
         
