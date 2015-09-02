@@ -7,39 +7,39 @@
 		<div class="panel panel-default ">
 			<div class="panel-body">
 
-				<legend>Formulario de registro</legend>
+				<legend><?php $this->lang->line('form_title')?></legend>
 
 					<?php echo form_open(''); ?>
 
 						<div class="form-group">
-					<label for="inputPassword">Nombre:</label> <input name="name"
-						type="text" class="form-control" placeholder="Nombre"
+					<label for="inputPassword"><?php $this->lang->line('placeholder_input_name')?>:</label> <input name="name"
+						type="text" class="form-control" placeholder="<?php $this->lang->line('placeholder_input_name')?>"
 						value="<?php echo set_value('name'); ?>">
 				</div>
 
 				<div class="form-group">
-					<label for="inputEmail">Apellido:</label> <input name="lastname"
+					<label for="inputEmail"><?php echo set_value('lastname'); ?>:</label> <input name="lastname"
 						type="text" class="form-control" id="inputEmail"
-						placeholder="Apellido"
+						placeholder="<?php $this->lang->line('placeholder_input_lastname')?>"
 						value="<?php echo set_value('lastname'); ?>">
 				</div>
 
 				<div class="form-group">
-					<label for="inputEmail">Email:</label> <input name="email"
+					<label for="inputEmail"><?php $this->lang->line('placeholder_input_email')?>:</label> <input name="email"
 						type="email" class="form-control" id="inputEmail"
-						placeholder="Email" value="<?php echo set_value('email'); ?>">
+						placeholder="<?php $this->lang->line('placeholder_input_email')?>" value="<?php echo set_value('email'); ?>">
 				</div>
 
 				<div class="form-group">
-					<label for="inputPassword">Contraseña:</label> <input
+					<label for="inputPassword"><?php $this->lang->line('placeholder_input_password')?>:</label> <input
 						name="password" type="password" class="form-control"
-						id="inputPassword" placeholder="Password">
+						id="inputPassword" placeholder="<?php $this->lang->line('placeholder_input_password')?>">
 				</div>
 
 				<div class="form-group">
-					<label for="inputPassword">Repite tu contraseña:</label> <input
+					<label for="inputPassword"><?php $this->lang->line('placeholder_input_password_2')?>:</label> <input
 						name="repeatpassword" type="password" class="form-control"
-						id="inputPassword" placeholder="Password">
+						id="inputPassword" placeholder="<?php $this->lang->line('placeholder_input_password_2')?>">
 				</div>
 
 				<div class="col-sm-12">

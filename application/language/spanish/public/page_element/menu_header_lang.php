@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////         Menu         /////////////////////////////
@@ -7,5 +8,6 @@
 
 $lang['menu_header_index_page'] = 'Inicio';
 $lang['menu_header_sing_up_button'] = 'Registrarse';
+$lang['menu_header_sing_up_button'] = 'Ingresar';
 
 
