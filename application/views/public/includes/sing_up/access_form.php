@@ -18,7 +18,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="inputEmail"><?php echo set_value('placeholder_input_lastname'); ?>:</label> <input name="lastname"
+					<label for="inputEmail"><?php echo $this->lang->line('placeholder_input_lastname')?>:</label> <input name="lastname"
 						type="text" class="form-control" id="inputEmail"
 						placeholder="<?php echo $this->lang->line('placeholder_input_lastname')?>"
 						value="<?php echo set_value('lastname'); ?>">
