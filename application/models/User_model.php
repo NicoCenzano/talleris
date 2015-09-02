@@ -17,7 +17,6 @@ class User_model extends CI_Model
     public function _update_user($b, $c)
     {
         $query = $this->db->query("UPDATE `users` SET `father`= " . $b . " WHERE `idUsers` = " . $c . "");
-        $query->result();
     }
 }
 ?>
