@@ -9,23 +9,15 @@ class User_model extends CI_Model
         parent::__construct();
     }
 
-    
     public function _add_user($name, $lastname, $password, $email)
     {
-        $this->db->query("CALL createUsers('{$name}', '{$lastname}', '{$email}', '{$password}', @id);");   
-    }
-    
-    
-    public function _update_user(){
-        
-        for($i=0;$i<=200000;$i++){
-            $b = rand(1,1000000);
-            $c = $b + 1;
-            $query = $this->db->query("UPDATE `users` SET `father`= " .$b ." WHERE `idUsers` = ".$c."");
-            $query->result();
-        }
-        
+        $this->db->query("CALL createUsers('{$name}', '{$lastname}', '{$email}', '{$password}', @id);");
     }
 
+    public function _update_user($b, $c)
+    {
+        $query = $this->db->query("UPDATE `users` SET `father`= " . $b . " WHERE `idUsers` = " . $c . "");
+        $query->result();
+    }
 }
 ?>
