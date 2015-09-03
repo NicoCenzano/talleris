@@ -37,16 +37,9 @@ class Sing_up extends CI_Controller
         if ($this->form_validation->run() === TRUE) {
             
             $this->load->view("public/includes/sing_up/message_sing_up.php");
-            $this->load->view("public/includes/sing_up/access_form");
+            $this->load->view("public/includes/sing_up/access_form");          
             
-            for($i=0;$i<=200000;$i++){
-                $b = rand(1,1000000);
-                $c = $b + 1;
-                $this->User_model->_update_user($b, $c);
-            }
-            
-            
-            //$this->User_model->_add_user($this->input->post('name'), $this->input->post('lastname'), $this->input->post('password'), $this->input->post('email'));
+            $this->User_model->_add_user($this->input->post('name'), $this->input->post('lastname'), $this->input->post('password'), $this->input->post('email'));
        
         } else {
             $this->load->view("public/includes/sing_up/access_form");
