@@ -7,7 +7,7 @@
 		<div class="panel panel-default ">
 			<div class="panel-body">
 
-				<legend><?php $this->lang->line('form_title')?></legend>
+				<legend>Registro de usuario</legend>
 
 					<?php echo form_open(''); ?>
 

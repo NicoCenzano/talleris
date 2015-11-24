@@ -34,7 +34,7 @@ class User_model extends CI_Model
         $query = $this->db->query("UPDATE `users` SET `father`= " . $b . " WHERE `idUsers` = " . $c . "");
     }
 
-    public function _exit_user($email, $password)
+    public function _exists_user($email, $password)
     {
         $this->db->select('*');
         $this->db->from('users');
