@@ -36,11 +36,10 @@ class User_notes extends CI_Controller
         
         if ($this->form_validation->run() === TRUE) {
             
-            $this->load->view("public/includes/sing_up/message_sing_up.php");
-            $this->load->view("public/includes/sing_up/access_form");
+
             
         } else {
-            $this->load->view("public/includes/sing_up/access_form");
+
         }
         
         $this->load->view("public/page_element/footer");
