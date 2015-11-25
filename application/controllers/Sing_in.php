@@ -33,11 +33,13 @@ class Sing_in extends CI_Controller
         
         if ($this->form_validation->run() === TRUE) {   
             
-        	$data = $this->User_model->_exists_user($this->input->post('email'), $this->input->post('password'));
+        	$var = $this->User_model->_exists_user($this->input->post('email'), $this->input->post('password'));
         	
         	if(isset($data)){
         	    var_dump($data);
         	    //redirect('', 'refresh');
+        	    echo "<br><br><br><br><br>"
+        	    echo $var->idUsers;   
         	}else{
         	    redirect('sing_up', 'refresh');
         	}
