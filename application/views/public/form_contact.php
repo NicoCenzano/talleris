@@ -62,7 +62,7 @@ echo validation_errors();
             </script>
 
 		</div>
-		<button type="submit" class="btn btn-primary"><?php echo $this->lang->line('button_send'); ?></button>
+		<button type="submit" class="btn btn-primary">Guardar</button>
 	</div>
 </div>
 </form>
