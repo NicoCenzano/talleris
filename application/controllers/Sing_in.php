@@ -35,8 +35,8 @@ class Sing_in extends CI_Controller
             
         	$var = $this->User_model->_exists_user($this->input->post('email'), $this->input->post('password'));
         	
-        	if(isset($data)){
-        	    var_dump($data);
+        	if(isset($var)){
+        	    var_dump($var);
         	    //redirect('', 'refresh');
         	    echo "<br><br><br><br><br>";
         	    echo $var->idUsers;   
