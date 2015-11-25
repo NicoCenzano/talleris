@@ -36,7 +36,8 @@ class Sing_in extends CI_Controller
         	$data = $this->User_model->_exists_user($this->input->post('email'), $this->input->post('password'));
         	
         	if(isset($data)){
-        	    redirect('', 'refresh');
+        	    var_dump($data);
+        	    //redirect('', 'refresh');
         	}else{
         	    redirect('sing_up', 'refresh');
         	}

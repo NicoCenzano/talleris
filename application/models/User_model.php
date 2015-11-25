@@ -60,8 +60,7 @@ class User_model extends CI_Model
     }
     
     public function _exists_user($email, $password)
-    {
-        
+    {    
         $this->db->select('*');
         $this->db->from('users');
         $this->db->where('email', $email);
