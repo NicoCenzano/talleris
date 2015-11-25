@@ -13,43 +13,33 @@ echo validation_errors();
 
 <div class="panel panel-primary">
 	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo $this->lang->line('form_title'); ?></h3>
+		<h3 class="panel-title">Mensajeria</h3>
 	</div>
 	<div class="panel-body">
 		<div class="form-group">
-			<label><?php echo $this->lang->line('form_name'); ?></label> <input
+			<label>Titulo</label> <input
 				name="name" type="text" class="form-control"
 			
 				>
 		</div>
+		
 		<div class="form-group">
-			<label><?php echo $this->lang->line('form_email'); ?></label> <input
-				name="emailaddress" type="email" class="form-control"
-				
-				>
-		</div>
-		<div class="form-group">
-			<label><?php echo $this->lang->line('form_subjet'); ?></label>
+			<label>Tipo</label>
 			<div class="col-xl-12">
 			
 				<div class="col-xs-12">
 					<select class="form-control" name="pre-subjet">
 						<option value="Pregunta:">Pregunta</option>
-						<?php 
-						  if(isset($_REQUEST['bug'])){
-				
-						      echo "<option value='Error:' selected>Encontre un error</option>";
-						  }else{
-						      echo "<option value='Error:'>Encontre un error</option>";
-						      }
-						?>
+						<option value='Error:' selected>Propio</option>
+						<option value='Error:'>Trabajo</option>
+						<option value='Error:'>ETC</option>
 					</select>
 				</div>
 
 			</div>
 		</div>
 		<div class="form-group">
-			<label><?php echo $this->lang->line('form_message'); ?></label>
+			<label>Mensaje</label>
 
 			<textarea name="message" id="editor1">
 
