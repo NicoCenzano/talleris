@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['sing_up'] = 'sing_up/sing_up_page';
 $route['sing_in'] = 'sing_in/sing_in_page';
+$route['agenda'] = 'sing_in/sing_in_page';
+$route['logout'] = 'logout/exit_admin';

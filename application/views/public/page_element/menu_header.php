@@ -30,7 +30,7 @@ function li_menu($url, $string, $type_user)
 				
 					<?php 
 					if($this->session->userdata('logged_in')){
-					    li_menu('sing_in', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_in_button'), FALSE);
+					    li_menu('agenda', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_in_button'), FALSE);
 					}
 					?>
 					
@@ -40,6 +40,11 @@ function li_menu($url, $string, $type_user)
 				<?php
     li_menu('sing_in', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_in_button'), $type_user);
     li_menu('sing_up', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_up_button'), $type_user);
+    
+    if($this->session->userdata('logged_in')){
+        li_menu('logout', '<span class="glyphicon glyphicon-user"></span> Salir', FALSE);
+    }
+    
     ?>	
 				</ul>
 			</div>
