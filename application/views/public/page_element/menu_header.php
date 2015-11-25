@@ -5,12 +5,10 @@ $type_user = $this->session->userdata('logged_in');
 
 function li_menu($url, $string, $type_user)
 {
-
-        if ($type_user == FALSE) {
-            echo "<li>";
-            echo anchor($url, $string);
-            echo "</li>";
-        
+    if ($type_user == FALSE) {
+        echo "<li>";
+        echo anchor($url, $string);
+        echo "</li>";
     }
 }
 
@@ -28,11 +26,11 @@ function li_menu($url, $string, $type_user)
 				<ul class="nav navbar-nav">
 					<li><?php echo anchor('', '<span class="glyphicon glyphicon-home"></span> '.$this->lang->line('menu_header_index_page')) ?></li>
 				
-					<?php 
-					if($this->session->userdata('logged_in')){
-					    li_menu('agenda', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_in_button'), FALSE);
-					}
-					?>
+					<?php
+    if ($this->session->userdata('logged_in')) {
+        li_menu('agenda', '<span class="glyphicon glyphicon-user"></span> Agenda', FALSE);
+    }
+    ?>
 					
 				</ul>
 
@@ -41,7 +39,7 @@ function li_menu($url, $string, $type_user)
     li_menu('sing_in', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_in_button'), $type_user);
     li_menu('sing_up', '<span class="glyphicon glyphicon-user"></span> ' . $this->lang->line('menu_header_sing_up_button'), $type_user);
     
-    if($this->session->userdata('logged_in')){
+    if ($this->session->userdata('logged_in')) {
         li_menu('logout', '<span class="glyphicon glyphicon-user"></span> Salir', FALSE);
     }
     
