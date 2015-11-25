@@ -38,8 +38,8 @@ class Sing_in extends CI_Controller
         	if(isset($data)){
         	    var_dump($data);
         	    //redirect('', 'refresh');
-        	    echo "<br><br><br><br><br>"
-        	    echo $var[0];   
+        	    echo "<br><br><br><br><br>";
+        	    echo $var->idUsers;   
         	}else{
         	    redirect('sing_up', 'refresh');
         	}
