@@ -29,19 +29,46 @@ class User_model extends CI_Model
         
     }
 
-    public function _update_user($b, $c)
+    public function _update_user($iduser, $name, $lastname, $email, $password)
     {
-        $query = $this->db->query("UPDATE `users` SET `father`= " . $b . " WHERE `idUsers` = " . $c . "");
+        $this->db->trans_start();
+        $this->db->query("CALL createUsers('{$iduser}', '{$name}', '{$lastname}', '{$email}', '{$password}', @updated);");
+        $this->db->trans_complete();
+        
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+        } else {
+            $this->db->trans_commit();
+        }
+        
+        //$query = $this->db->query("UPDATE `users` SET `father`= " . $b . " WHERE `idUsers` = " . $c . "");
     }
 
+    public function _delete_user($iduser, $name, $lastname, $email, $password)
+    {
+        $this->db->trans_start();
+        $this->db->query("CALL deleteUser('{$id}', @delete);");
+        $this->db->trans_complete();
+    
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+        } else {
+            $this->db->trans_commit();
+        }
+    
+        //$query = $this->db->query("UPDATE `users` SET `father`= " . $b . " WHERE `idUsers` = " . $c . "");
+    }
+    
     public function _exists_user($email, $password)
     {
+        /* Forma con acceso total
         $this->db->select('*');
         $this->db->from('users');
         $this->db->where('email', $email);
         $this->db->where('password', $password);
         $query = $this->db->get();
         return $query->row();
+        */
     }
 }
 ?>
