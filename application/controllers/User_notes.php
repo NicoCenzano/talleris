@@ -10,14 +10,13 @@ class User_notes extends CI_Controller
         $this->load->library('form_validation');
         
         $model = array(
-            'User_model'
+            
         );
         
         $this->load->model($model);
         
         $languages_files = array(
-            'public/page_element/menu_header',
-            'public/page/index'
+
         );
         
         $this->lang->load($languages_files);
@@ -33,6 +32,7 @@ class User_notes extends CI_Controller
         
         $this->load->view("public/page_element/header");
         $this->load->view("public/page_element/menu_header");
+        $this->load->view("public/form_contact");
         
         if ($this->form_validation->run() === TRUE) {
             
