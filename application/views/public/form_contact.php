@@ -19,25 +19,25 @@ echo validation_errors();
 		<div class="form-group">
 			<label><?php echo $this->lang->line('form_name'); ?></label> <input
 				name="name" type="text" class="form-control"
-				placeholder=<?php echo $this->lang->line('form_name'); ?>
-				value="<?php echo set_value('name'); ?>">
+			
+				>
 		</div>
 		<div class="form-group">
 			<label><?php echo $this->lang->line('form_email'); ?></label> <input
 				name="emailaddress" type="email" class="form-control"
-				placeholder=<?php echo $this->lang->line('form_email'); ?>
-				value="<?php echo set_value('emailaddress'); ?>">
+				
+				>
 		</div>
 		<div class="form-group">
 			<label><?php echo $this->lang->line('form_subjet'); ?></label>
 			<div class="col-xl-12">
 			
-				<div class="col-xs-4">
+				<div class="col-xs-12">
 					<select class="form-control" name="pre-subjet">
 						<option value="Pregunta:">Pregunta</option>
 						<?php 
-						  if(isset($_REQUEST['bug']) and $_REQUEST['bug'] =1){
-						      echo "hola";
+						  if(isset($_REQUEST['bug'])){
+				
 						      echo "<option value='Error:' selected>Encontre un error</option>";
 						  }else{
 						      echo "<option value='Error:'>Encontre un error</option>";
@@ -46,11 +46,6 @@ echo validation_errors();
 					</select>
 				</div>
 
-				<div class="col-xs-8">
-					<input type="text" class="form-control" name ="subjet"
-						placeholder=<?php echo $this->lang->line('form_message'); ?>
-						value="<?php echo set_value('title'); ?>">
-				</div>
 			</div>
 		</div>
 		<div class="form-group">
